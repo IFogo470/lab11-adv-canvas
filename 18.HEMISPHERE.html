@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body onload="draw()">
+
+<canvas id="sketch" width="600" height="600">
+</canvas>
+
+<script>
+	function draw() {
+		var sketch = document.getElementById('sketch');
+		var context = sketch.getContext("2d");
+		context.fillStyle = "#208C0D"; // weird green that I like
+		context.beginPath();
+		context.arc(150, 150, 150, 0, 1 * Math.PI, true);
+			// context.arc(x, y, radius, start angle, end angle, clockwise);
+			// 1 * Math.PI instead of 2 * Math.PI which gives a half circle
+		context.closePath();
+		context.fill();
+		context.fillStyle = "#000000"; // black
+		context.beginPath();
+		context.arc(150, 175, 150, 0, 1 * Math.PI, false);
+			// context.arc(x, y, radius, start angle, end angle, clockwise);
+			// 1 * Math.PI instead of 2 * Math.PI which gives a half circle
+			// y = 175 to pad with a little bit of vertical space between each half circle
+		context.closePath();
+		context.fill();
+	}
+</script>
+
+</body>
+</html>

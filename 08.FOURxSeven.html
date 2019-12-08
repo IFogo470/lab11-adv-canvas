@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="600" height="600">
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+			context.fillStyle = "#06BDFF"; // light blue
+				// 1. OUTER LOOP (a column of 7 things; vertical dimension; i.e. # of rows)
+				// for each r, make a row (each row will be another loop, nested...)
+				for (r = 1; r <= 7; r++) {
+					// 2. INNER LOOP (rows; horizontal dimension; i.e. items in a single row)
+					// for each i, build a circle to the right of the last
+					for (i = 1; i <= 4; i++) {
+						context.beginPath();
+						context.arc((i * 50), (r * 50), 20, 0, 2 * Math.PI, true);
+							// use r to define the y values (constant for a single row)
+							// use i to define the x values (changing within each row)
+							// context.arc(x, y, radius, start angle, end angle, clockwise);
+						context.closePath();
+						context.fill();
+					}
+				}
+			}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="600" height="600">
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+				// circle #1
+			context.fillStyle = "#5DADE2"; // blue
+			context.beginPath();
+			context.arc(300, 300, 300, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+				// circle #2
+			context.fillStyle = "#3498DB"; // blue
+			context.beginPath();
+			context.arc(300, 300, 250, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+				// circle #3
+			context.fillStyle = "#2E86C1"; // blue
+			context.beginPath();
+			context.arc(300, 300, 200, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+				// circle #4
+			context.fillStyle = "#2874A6"; // blue
+			context.beginPath();
+			context.arc(300, 300, 150, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+				// circle #5
+			context.fillStyle = "#21618C"; // blue
+			context.beginPath();
+			context.arc(300, 300, 100, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+				// circle #6
+			context.fillStyle = "#002FA7"; // Yves Klein Blue
+			context.beginPath();
+			context.arc(300, 300, 50, 0, 2 * Math.PI, true);
+				// context.arc(x, y, radius, start angle, end angle, clockwise);
+			context.closePath();
+			context.fill();
+		}
+	</script>
+
+</body>
+</html>
